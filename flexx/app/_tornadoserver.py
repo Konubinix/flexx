@@ -596,7 +596,7 @@ class WSHandler(WebSocketHandler):
                 # Delay is so big that connection probably dropped.
                 # Note that a browser sends a pong even if JS is busy
                 logger.warning('Closing connection due to lack of pong')
-                self.close(1000, 'Conection timed out (no pong).')
+                self.close(1000, 'Connection timed out (no pong).')
                 return
 
     def on_pong(self, data):
